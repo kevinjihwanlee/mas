@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {Row, Col} from 'react-bootstrap';
 import CoursesNotTaken from './components/CoursesNotTaken';
 import CoursesTaken from './components/CoursesTaken';
+import $ from 'jquery';
 
 export default class CourseHistory extends Component {
   constructor(props) {
@@ -46,6 +47,26 @@ export default class CourseHistory extends Component {
       coursesTaken: copyOfCoursesTaken
     })
   }
+  
+  sendCourses() {
+    var result = [];
+    for (var courseKey in this.state.coursesTaken) {
+      result.push(this.state.coursesTaken[courseKey].course_id);
+    }
+    
+    
+    $.ajax({
+      url: `/`, //what url
+      dataType: 'json',
+      method: 'post',
+      success: function(data) {
+        window.location.href = "/";
+      },
+      error: function(xhr, status, err) {
+        console.log(err);
+      }
+    })
+  }
 
   render() {
     return (
@@ -55,7 +76,7 @@ export default class CourseHistory extends Component {
             <CoursesNotTaken addCourse={this.addCourse} coursesNotTaken={this.state.coursesNotTaken} />
           </Col>
           <Col md={6}>
-            <CoursesTaken removeCourse={this.removeCourse} coursesTaken={this.state.coursesTaken} />
+            <CoursesTaken sendCourses={this.sendCourses.bind(this)} removeCourse={this.removeCourse} coursesTaken={this.state.coursesTaken} />
           </Col>
         </Row>
       </div>
