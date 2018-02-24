@@ -1,6 +1,11 @@
-.App {
+html,body,#root {
+   height: 100%;
 }
 
+.App {
+  font-family: "Century Gothic";
+  height: 100%;
+}
 
 .App-header {
     background-color: #4E2A84;
@@ -14,110 +19,82 @@
   color: white;
 }
 
-.App-header a:hover {
-  color: black;
-}
-
 .App-title {
-    font-size: 1.5em;
-    text-transform: uppercase;
-}
-
-.App-intro {
-    font-size: large;
+    font-size: 28px;
 }
 
 .main-content {
-  padding: 25px 30px 25px 30px;
-}
-
-.search_degree ul {
-    margin: 0;
-    padding: 0;
-}
-
-.search_degree li {
-    list-style-type: none;
-}
-
-.search_degree li a {
-    display: block;
-    text-decoration: none;
-    color: black;
-    font-size: 18px;
-    text-align: center;
-}
-
-.search_degree li a:hover {
-    color: gray;
-}
-
-.search-button {
-    width: 100px;
-    height: 50px;
-    border-radius: 5px;
-    border: none;
-    color: white;
-    background: rgb(131, 131, 131);
-}
-
-.sidebar {
-  width: 100%;
+  padding: 20px 20px 20px 20px;
+  background-color: #f2f2f2;
   height: 100%;
 }
 
-.content {
-  width: 100%;
+.centeredText {
+  text-align: center;
 }
 
-.tabs {
+.rightText {
   text-align: right;
 }
 
-@keyframes App-logo-spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+.bold {
+   font-weight: bold;
 }
 
-.register-search-div input {
-    border-radius: 5px;
-    box-shadow: none;
-    border: 1px solid gray;
-    padding: 2px 5px;
-    margin: 5px 5px 5px 5px;
+.underlinedText {
+  text-decoration: underline;
 }
 
-.search-icon {
-    padding: 5px;
-    margin: 3px;
+.search-content {
+  padding-top: 15px;
+}
+
+.changeButton {
+    text-decoration: none;
     color: black;
 }
 
-
-button.search-button:hover {
-    background: black;
-    cursor: pointer;
-    color: white;
+a.changeButton:hover {
+  text-decoration: none;
+  color: gray;
+  cursor: pointer;
 }
 
-button.search-button:focus {
-    outline: none;
+.course-list-content {
+  padding-top: 15px;
 }
 
-.register-search-result-div {
-    margin: 0px auto;
-    padding: 10px 5px 10px 10px;
+.subcourselist {
+  margin-bottom: 30px;
+  text-align: center;
 }
 
-.register-search-result-div h4,p {
-    margin: 10px auto;
+.sectionHeader {
+  font-size: 20px;
+  margin-bottom: 15px;
 }
 
-.register-search-result-light {
-    background: white;
+.subcourselist p {
+  font-size: 18px;
 }
 
-.register-search-result-dark {
-    background: rgb(118, 093, 160);
-    color: white;
+a.list-group-item:hover {
+  background-color: #8c8c8c !important;
+  color: white !important;
+}
+
+.register-button {
+  background-color: #836EAA !important;
+  border-color: #836EAA !important;
+  margin-top: 25px;
+}
+
+button.register-button:hover {
+  background-color: #401F68 !important;
+  border-color: #401F68 !important;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
 }
