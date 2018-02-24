@@ -11,7 +11,7 @@ const Courses = (props) => {
           <ListGroupItem>
             <h4 className="bold">{course.search_name}</h4>
             <p>{course.title}</p>
-            <p className="rightText"><a onClick={(e) => {props.changeClass(course);}} className="changeButton">Add Class</a></p>
+            <p className="rightText"><a onClick={(e) => {props.changeClass(course);}} className="changeButton" bsStyle="primary">Add Class</a></p>
           </ListGroupItem>
         ))}
       </ListGroup>
@@ -22,7 +22,7 @@ const Courses = (props) => {
           <ListGroupItem>
             <h4 className="bold">{course.search_name}</h4>
             <p>{course.title}</p>
-            <p  className="rightText"><a onClick={(e) => {props.changeClass(course);}} className="changeButton">Remove Class</a></p>
+            <p  className="rightText"><a onClick={(e) => {props.changeClass(course);}} className="changeButton" bsStyle="primary">Remove Class</a></p>
           </ListGroupItem>
         ))}
       </ListGroup>

@@ -288,6 +288,12 @@ const data = {
     		"topic": null
     	}
     ],
+  "Technical Electives": [
+
+  ],
+  "Project Requirement": [
+
+  ]
 }
 
 export default data;
