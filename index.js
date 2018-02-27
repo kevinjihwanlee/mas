@@ -10,9 +10,10 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'client/build')));
 
 // Post request, when register button has been clicked and courseObjects have been sent
-app.post('/', (req, res) => {
+app.post('/register', (req, res) => {
   // post logic here
   console.log('This has been reached!');
+  res.json(200, {success: true});
 });
 
 // The "catchall" handler: for any request that doesn't

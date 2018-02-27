@@ -21,6 +21,23 @@ class App extends Component {
   }
 
   componentDidMount() {
+    const cachedCourses = localStorage.getItem("courseData");
+    if (cachedCourses) {
+      var cachedJSON = JSON.parse(cachedCourses);
+      var degreeAreas = [];
+      for (var key in cachedJSON) {
+        degreeAreas.push(key);
+      }
+
+      this.setState({
+        courseData: cachedJSON,
+        degreeAreas: degreeAreas,
+        activeDegreeArea: degreeAreas[0],
+        currentCourses: cachedJSON[degreeAreas[0]]
+      });
+      return;
+    }
+
     var degreeAreas = [];
     for (var key in data) {
       degreeAreas.push(key);
@@ -55,21 +72,21 @@ class App extends Component {
   }
 
   registerClicked() {
-    var data = this.state.courseData;
+    var courseData = this.state.courseData;
+    localStorage.setItem('courseData', JSON.stringify(courseData));
 
     $.ajax({
-      url: `/`, //what url
+      url: `/register`, //what url
       dataType: 'json',
       method: 'post',
-      data: data,
+      data: courseData,
       success: function(data) {
-        alert("Successfuly registration!");
+        window.location.href = "/";
       },
       error: function(xhr, status, err) {
         console.log(err);
-        alert("Oops! Something went wrong.");
       }
-    })
+    });
   }
 
   render() {
