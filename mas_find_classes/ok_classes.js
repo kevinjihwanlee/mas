@@ -105,4 +105,6 @@ const FindClasses = (data) => {
   return final_classes;
 }
 
-console.log(FindClasses(data));
+//console.log(FindClasses(data));
+
+module.exports = FindClasses;
