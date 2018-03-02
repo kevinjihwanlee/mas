@@ -1,23 +1,26 @@
 const express = require('express');
 const path = require('path');
+const bodyParser = require('body-parser')
+
+const suggestedClasses = require('./mas_find_classes/ok_classes')
 
 const app = express();
+
+app.use(bodyParser.json());
+
+// supports parsing of application/x-www-form-urlencoded post data
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // Serve static files from the React app
 app.use(express.static(path.join(__dirname, 'client/build')));
 
-// Put all API endpoints under '/api'
-app.get('/api', (req, res) => {
-//   const count = 5;
-
-//   // Generate some passwords
-//   const passwords = Array.from(Array(count).keys()).map(i =>
-//     generatePassword(12, false)
-//   )
-
-//   // Return them as json
-//   res.json(passwords);
-    res.send('hello')
+// Post request, when register button has been clicked and courseObjects have been sent
+app.post('/register', (req, res) => {
+  // post logic here
+  res.setHeader('Content-Type', 'application/json');
+  console.log(suggestedClasses(req.body))
+  console.log('This has been reached!');
+  res.json(200, {success: true});
 });
 
 // The "catchall" handler: for any request that doesn't
