@@ -10,7 +10,7 @@ html,body,#root {
 .App-header {
     background-color: #4E2A84;
     text-align: center;
-    height: 115px;
+    height: 100px;
     padding: 20px;
     color: white;
 }
@@ -46,7 +46,7 @@ html,body,#root {
 }
 
 .search-content {
-  padding-top: 15px;
+
 }
 
 .changeButton {
@@ -97,4 +97,26 @@ button.register-button:hover {
 .button-wrapper {
   display: flex;
   justify-content: center;
+}
+
+.table-fixed thead {
+  width: 97%;
+}
+.table-fixed tbody {
+  height: 400px;
+  overflow-y: auto;
+  width: 100%;
+}
+.tsearch {
+  height: 200px;
+}
+.tsuggested {
+  height: 400px;
+}
+.table-fixed thead, .table-fixed tbody, .table-fixed tr, .table-fixed td, .table-fixed th {
+  display: block;
+}
+.table-fixed tbody td, .table-fixed thead > tr> th {
+  float: left;
+  border-bottom-width: 0;
 }

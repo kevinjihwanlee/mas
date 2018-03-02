@@ -6,13 +6,15 @@ import {Button} from 'react-bootstrap';
 const CourseList = (props) => {
   return (
     <div>
-      <h2 className="centeredText bold">Your Classes</h2>
+      <h4 className="centeredText bold">Your Classes</h4>
       <div className="course-list-content">
         {props.degreeAreas.map(degreeArea => (
           <SubCourseList
             degreeArea={degreeArea}
             courses={props.courseData[degreeArea]}
+            changeClass={props.changeClass}
             />
+
         ))}
         <div className="button-wrapper">
           <Button onClick={props.registerClicked} className="register-button" bsStyle="primary">Register</Button>

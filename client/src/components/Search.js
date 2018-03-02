@@ -6,16 +6,16 @@ import Courses from './Courses';
 const Search = (props) => {
   return (
     <div>
-      <h2 className="centeredText bold">Search for Classes</h2>
+
       <Row className="search-content">
-        <Col md={3}>
+        <Col md={4}>
           <DegreeAreas
             degreeAreas={props.degreeAreas}
             changeDegreeArea={props.changeDegreeArea}
             activeDegreeArea={props.activeDegreeArea}
             />
         </Col>
-        <Col md={9}>
+        <Col md={8}>
           <Courses
             currentCourses={props.currentCourses}
             changeClass={props.changeClass}

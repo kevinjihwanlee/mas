@@ -1,22 +1,31 @@
-import React, { Component } from 'react';
+import React, { Component} from 'react';
+import ReactDOM from 'react-dom'
+
 import HeaderBar from './components/HeaderBar';
 import Search from './components/Search';
 import CourseList from './components/CourseList';
+import SuggestedCourses from './components/SuggestedCourses';
 import data from './data/data';
+import test_data from './data/test_data';
+import api_data from './data/api_data.json';
 
 import {Row, Col} from 'react-bootstrap';
 import $ from 'jquery';
 
 
 class App extends Component {
+
   constructor(props) {
     super(props);
 
     this.state = {
        currentCourses: [],
+       suggestedCourses: [],
        degreeAreas: [],
        activeDegreeArea: null,
-       courseData: {}
+       courseData: {},
+       suggestedData: {},
+       itemsCount : 40
     }
   }
 
@@ -28,9 +37,10 @@ class App extends Component {
 
     this.setState({
       courseData: data,
+      suggestedData: test_data,
       degreeAreas: degreeAreas,
       activeDegreeArea: degreeAreas[0],
-      currentCourses: data[degreeAreas[0]]
+      currentCourses: data[degreeAreas[0]],
     });
   }
 
@@ -42,17 +52,33 @@ class App extends Component {
   }
 
   changeClass(courseObject) {
-    var data = this.state.courseData;
-    for (var i in data[this.state.activeDegreeArea]) {
-      if (data[this.state.activeDegreeArea][i].course_id === courseObject.course_id) {
-        data[this.state.activeDegreeArea][i].taken = !data[this.state.activeDegreeArea][i].taken;
+    var searchData = this.state.courseData;
+    for (var i in searchData[this.state.activeDegreeArea]) {
+      if (searchData[this.state.activeDegreeArea][i].course_id === courseObject.course_id) {
+        searchData[this.state.activeDegreeArea][i].taken = !searchData[this.state.activeDegreeArea][i].taken;
       }
     }
 
     this.setState({
-      courseData: data
+      courseData: searchData
     });
   }
+
+  getSuggested() {
+    var suggestData = this.state.suggestedData[this.state.activeDegreeArea];
+    var courses = [];
+
+    for (var i in suggestData) {
+      for (var j in api_data) {
+        if (api_data[j].search_name.includes(suggestData[i])) {
+          courses.push(api_data[j]);
+        }
+      }
+    }
+
+    return courses;
+  }
+
 
   registerClicked() {
     var data = this.state.courseData;
@@ -72,7 +98,20 @@ class App extends Component {
     })
   }
 
+  handleScroll(scrollData){
+    console.log(scrollData);
+  }
+
   render() {
+
+    var itemElements = [];
+
+        for( var i = 0; i< this.state.itemsCount; i++){
+            itemElements.push(<div className="item" key={i}>item {i}</div>);
+        }
+
+        let scrollbarStyles = {borderRadius: 5};
+
     return (
       <div className="App">
         <HeaderBar />
@@ -88,11 +127,9 @@ class App extends Component {
                 />
             </Col>
             <Col md={5}>
-              <CourseList
-                registerClicked={this.registerClicked.bind(this)}
-                degreeAreas={this.state.degreeAreas}
-                courseData={this.state.courseData}
-                />
+              <SuggestedCourses
+                suggestedCourses={this.getSuggested()}
+              />
             </Col>
           </Row>
         </div>
