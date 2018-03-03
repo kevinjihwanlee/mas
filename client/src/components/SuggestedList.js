@@ -1,12 +1,12 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import DegreeAreas from './DegreeAreas';
-import Courses from './Courses';
+import Suggested from './Suggested';
 
-const Search = (props) => {
+const SuggestedList = (props) => {
   return (
     <div>
-      <h2 className="centeredText bold">Search for Classes</h2>
+      <h2 className="centeredText bold">Suggested Courses</h2>
       <Row className="search-content">
         {/* <Col md={3}>
           <DegreeAreas
@@ -16,9 +16,9 @@ const Search = (props) => {
             />
         </Col> */}
         <Col>
-          <Courses
+          <Suggested
             currentCourses={props.currentCourses}
-            changeClass={props.changeClass}
+            // changeClass={props.changeClass}
             />
         </Col>
       </Row>
@@ -26,4 +26,4 @@ const Search = (props) => {
   )
 }
 
-export default Search;
+export default SuggestedList;

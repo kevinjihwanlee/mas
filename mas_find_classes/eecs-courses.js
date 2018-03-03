@@ -1,4 +1,4 @@
-const data = {
+{
 	"Breadth": [
 		{
 			"attributes": null,
@@ -3977,5 +3977,3 @@ const data = {
 		}
 	]
 }
-
-module.exports = data;
