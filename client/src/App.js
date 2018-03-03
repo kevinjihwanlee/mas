@@ -96,7 +96,6 @@ class App extends Component {
     return courses;
   }
 
-
   registerClicked() {
     var courseData = this.state.courseData;
     localStorage.setItem('courseData', JSON.stringify(courseData));
@@ -107,7 +106,8 @@ class App extends Component {
       method: 'post',
       data: courseData,
       success: function(data) {
-        window.location.href = "/";
+        //window.location.href = "/";
+        this.setState({suggestedData: data}).bind(this);
       },
       error: function(xhr, status, err) {
         console.log(err);
