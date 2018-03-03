@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import HeaderBar from './components/HeaderBar';
 import Search from './components/Search';
 import CourseList from './components/CourseList';
+import SuggestedList from './components/SuggestedList';
 import data from './data/data';
 
 import {Row, Col} from 'react-bootstrap';
@@ -16,7 +17,8 @@ class App extends Component {
        currentCourses: [],
        degreeAreas: [],
        activeDegreeArea: null,
-       courseData: {}
+       courseData: {},
+       suggestedCourses: {}
     }
   }
 
@@ -81,8 +83,9 @@ class App extends Component {
       method: 'post',
       data: courseData,
       success: function(data) {
-        window.location.href = "/";
-      },
+        // window.location.href = "/";
+        this.setState({suggestedCourses: data});
+      }.bind(this),
       error: function(xhr, status, err) {
         console.log(err);
       }
@@ -95,7 +98,7 @@ class App extends Component {
         <HeaderBar />
         <div className="main-content">
           <Row>
-            <Col md={7}>
+            <Col md={4}>
               <Search
                 changeDegreeArea={this.changeDegreeArea.bind(this)}
                 changeClass={this.changeClass.bind(this)}
@@ -104,11 +107,20 @@ class App extends Component {
                 activeDegreeArea={this.state.activeDegreeArea}
                 />
             </Col>
-            <Col md={5}>
+            <Col md={4}>
               <CourseList
                 registerClicked={this.registerClicked.bind(this)}
                 degreeAreas={this.state.degreeAreas}
                 courseData={this.state.courseData}
+                />
+            </Col>
+            <Col md={4}>
+              <SuggestedList
+                changeDegreeArea={this.changeDegreeArea.bind(this)}
+                changeClass={this.changeClass.bind(this)}
+                currentCourses={this.state.currentCourses}
+                degreeAreas={this.state.degreeAreas}
+                activeDegreeArea={this.state.activeDegreeArea}
                 />
             </Col>
           </Row>

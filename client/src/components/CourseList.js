@@ -14,6 +14,7 @@ const CourseList = (props) => {
             courses={props.courseData[degreeArea]}
             />
         ))}
+        
         <div className="button-wrapper">
           <Button onClick={props.registerClicked} className="register-button" bsStyle="primary">Register</Button>
         </div>
