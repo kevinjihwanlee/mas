@@ -5,7 +5,7 @@ const SubCourseList = (props) => {
     <div className="subcourselist">
       <thead>
         <tr>
-          <b>{props.degreeArea}</b>
+          <h4>{props.degreeArea}</h4>
         </tr>
       </thead>
       {props.courses.map(courseObject => (

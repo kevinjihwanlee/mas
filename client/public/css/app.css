@@ -2,10 +2,17 @@ html,body,#root {
    height: 100%;
 }
 
+@font-face{
+  font-family: 'Avenir';
+  src: url('fonts/AvenirNext_Text/AvenirNext-Regular-08.ttf')
+       format('truetype');
+}
+
 .App {
-  font-family: "Century Gothic";
+  font-family: "Avenir";
   height: 100%;
 }
+
 
 .App-header {
     background-color: #4E2A84;
@@ -13,6 +20,13 @@ html,body,#root {
     height: 100px;
     padding: 20px;
     color: white;
+    /* -webkit-box-shadow: 0px 5px 3px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 5px 3px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 5px 3px 0px rgba(0,0,0,0.75);
+    position: relative;
+    z-index: 10;
+     */
+    
 }
 
 .App-header a {
