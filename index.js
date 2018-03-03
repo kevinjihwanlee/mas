@@ -18,7 +18,7 @@ app.use(express.static(path.join(__dirname, 'client/build')));
 app.post('/register', (req, res) => {
   // post logic here
   res.setHeader('Content-Type', 'application/json');
-  console.log(suggestedClasses(req.body))
+  res.send(suggestedClasses(req.body))
   console.log('This has been reached!');
   res.json(200, {success: true});
 });

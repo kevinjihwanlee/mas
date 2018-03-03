@@ -9,7 +9,7 @@ import data from './data/data';
 import test_data from './data/test_data';
 import api_data from './data/api_data.json';
 
-import {Row, Col} from 'react-bootstrap';
+import {Row, Col, Button} from 'react-bootstrap';
 import $ from 'jquery';
 
 
@@ -106,8 +106,8 @@ class App extends Component {
       method: 'post',
       data: courseData,
       success: function(data) {
-        //window.location.href = "/";
-        this.setState({suggestedData: data}).bind(this);
+        window.location.href = "/";
+        this.setState({suggestedData: data});
       },
       error: function(xhr, status, err) {
         console.log(err);
@@ -142,6 +142,9 @@ class App extends Component {
                 degreeAreas={this.state.degreeAreas}
                 activeDegreeArea={this.state.activeDegreeArea}
                 />
+                      <div className="button-wrapper">
+          <Button onClick={this.registerClicked} className="register-button" bsStyle="primary">Register</Button>
+        </div>
             </Col>
             <Col md={5}>
               <SuggestedCourses
