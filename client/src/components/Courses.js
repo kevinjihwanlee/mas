@@ -26,7 +26,7 @@ const Courses = (props) => {
                   <h4>{course.search_name}</h4>
                 </td>
                 <td class="col-xs-2">
-                  <h4><a onClick={(e) => {props.changeClass(course);}} className="changeButton" bsStyle="primary"> X</a></h4>
+                  <h4><a onClick={(e) => {props.changeClass(course);}} className="changeButton" bsStyle="primary"> +</a></h4>
                 </td>
               </tr>
             ))}

@@ -1,24 +1,22 @@
 import React, { Component} from 'react';
-import ReactDOM from 'react-dom'
-
 import HeaderBar from './components/HeaderBar';
 import CourseList from './components/CourseList';
 import SuggestedCourses from './components/SuggestedCourses';
 import Courses from './components/Courses';
 import DegreeAreas from './components/DegreeAreas';
 
-import data from './data/data';
-import test_data from './data/test_data';
-import api_data from './data/api_data.json';
-
-import {Row, Col} from 'react-bootstrap';
+import {Row, Col, Button} from 'react-bootstrap';
 import $ from 'jquery';
 
+import getSuggestedClasses from './mas_find_classes/ok_classes';
+const data = require("./data/eecs-courses.json");
 
 class App extends Component {
 
   constructor(props) {
     super(props);
+
+    this.registerClicked = this.registerClicked.bind(this);
 
     this.state = {
        currentCourses: [],
@@ -27,7 +25,6 @@ class App extends Component {
        activeDegreeArea: null,
        suggestedDegreeArea: null,
        courseData: {},
-       suggestedData: {},
        itemsCount : 40
     }
   }
@@ -58,7 +55,6 @@ class App extends Component {
 
     this.setState({
       courseData: data,
-      suggestedData: test_data,
       degreeAreas: degreeAreas,
       activeDegreeArea: degreeAreas[0],
       suggestedDegreeArea: degreeAreas[0],
@@ -92,37 +88,31 @@ class App extends Component {
     });
   }
 
-  getSuggested() {
-    var suggestData = this.state.suggestedData[this.state.suggestedDegreeArea];
-    var courses = [];
-
-    for (var i in suggestData) {
-      for (var j in api_data) {
-        if (api_data[j].search_name.includes(suggestData[i])) {
-          courses.push(api_data[j]);
-        }
-      }
-    }
-
-    return courses;
-  }
-
 
   registerClicked() {
     var courseData = this.state.courseData;
     localStorage.setItem('courseData', JSON.stringify(courseData));
-
-    $.ajax({
-      url: `/register`, //what url
-      dataType: 'json',
-      method: 'post',
-      data: courseData,
-      success: function(data) {
-        window.location.href = "/";
-      },
-      error: function(xhr, status, err) {
-        console.log(err);
+    //console.log(this);
+    var suggestedClasses = getSuggestedClasses(courseData);
+    console.log(suggestedClasses);
+    console.log(courseData['Major']);
+    var courses = [];
+    for (var key in courseData) {
+      //console.log(key);
+      for (var i in courseData[key]) {
+        for (var j in suggestedClasses) {
+          //console.log(courseData[key][i].id.toString() + ' - ' + suggestedClasses[j].toString());
+          //console.log(suggestedClasses[j]);
+          if (suggestedClasses[j] === courseData[key][i].id.toString()) {
+            if(!courseData[key][i].taken){
+              courses.push(courseData[key][i]);
+            }
+          }
+        }
       }
+    }
+    this.setState({
+      suggestedCourses: courses
     });
   }
 
@@ -157,7 +147,7 @@ class App extends Component {
             </Col>
             <Col md={4}>
               <SuggestedCourses
-                suggestedCourses={this.getSuggested()}
+                suggestedCourses={this.state.suggestedCourses}
                 degreeAreas={this.state.degreeAreas}
                 suggestedDegreeArea={this.state.suggestedDegreeArea}
                 changeSuggestedDegreeArea={this.changeSuggestedDegreeArea.bind(this)}

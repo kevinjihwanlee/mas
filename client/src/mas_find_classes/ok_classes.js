@@ -1,7 +1,4 @@
 const string_parser = require('./reg_exp');
-const data = require('./data');
-
-
 // Find taken classes
 
 const FindClasses = (data) => {
@@ -57,7 +54,7 @@ const FindClasses = (data) => {
         counter ++;
       }
     })
-    if (counter == major_dict[m_keys[i]].length) {
+    if (counter === major_dict[m_keys[i]].length) {
       available_classes.push(m_keys[i])
     }
   }
@@ -69,7 +66,7 @@ const FindClasses = (data) => {
         counter ++;
       }
     })
-    if (counter == breadth_dict[b_keys[i]].length) {
+    if (counter === breadth_dict[b_keys[i]].length) {
       available_classes.push(b_keys[i])
     }
   }
@@ -82,7 +79,7 @@ const FindClasses = (data) => {
         counter ++;
       }
     })
-    if (counter == depth_dict[d_keys[i]].length) {
+    if (counter === depth_dict[d_keys[i]].length) {
       available_classes.push(d_keys[i])
     }
   }
@@ -95,7 +92,7 @@ const FindClasses = (data) => {
         counter ++;
       }
     })
-    if (counter == project_dict[p_keys[i]].length) {
+    if (counter === project_dict[p_keys[i]].length) {
       available_classes.push(p_keys[i])
     }
   }
