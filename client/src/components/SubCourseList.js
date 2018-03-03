@@ -1,4 +1,5 @@
 import React from 'react';
+import {Row, Col, Button} from 'react-bootstrap';
 
 const SubCourseList = (props) => {
   return (
@@ -12,17 +13,20 @@ const SubCourseList = (props) => {
         courseObject.taken &&
         <tbody>
         <tr>
-          <td class="col-xs-10">
-            <h4>{courseObject.search_name}</h4>
-          </td>
-          <td class="col-xs-2">
+
+            <h4>{courseObject.search_name} <a id='ex' onClick={(e) => {props.changeClass(courseObject);}} className="changeButton" bsStyle="danger"> X</a></h4>
+
+          {/* <td class="col-xs-2">
             <h4><a onClick={(e) => {props.changeClass(courseObject);}} className="changeButton" bsStyle="primary"> X</a></h4>
-          </td>
+          </td> */}
         </tr>
         </tbody>
       ))}
     </div>
   )
 }
+
+
+
 
 export default SubCourseList

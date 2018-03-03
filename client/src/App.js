@@ -95,11 +95,13 @@ class App extends Component {
   registerClicked() {
     var courseData = this.state.courseData;
     var suggestedClasses = getSuggestedClasses(courseData);
+    console.log(suggestedClasses);
     var courses = {};
     for (var key in courseData) {
       courses[key] = [];
       for (var i in courseData[key]) {
         for (var j in suggestedClasses) {
+
           if (suggestedClasses[j] === courseData[key][i].id.toString()) {
             if(!courseData[key][i].taken){
               courses[key].push(courseData[key][i]);

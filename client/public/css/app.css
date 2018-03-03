@@ -13,6 +13,9 @@ html,body,#root {
   height: 100%;
 }
 
+#ex {
+  color:red;
+}
 
 .App-header {
     background-color: #4E2A84;
