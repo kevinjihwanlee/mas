@@ -65,7 +65,7 @@ class App extends Component {
   changeDegreeArea(degreeArea) {
     this.setState({
       activeDegreeArea: degreeArea,
-      currentCourses: data[degreeArea]
+      currentCourses: this.state.courseData[degreeArea]
     });
   }
 
@@ -77,32 +77,29 @@ class App extends Component {
 
   changeClass(courseObject) {
     var searchData = this.state.courseData;
-    for (var i in searchData[this.state.activeDegreeArea]) {
-      if (searchData[this.state.activeDegreeArea][i].course_id === courseObject.course_id) {
-        searchData[this.state.activeDegreeArea][i].taken = !searchData[this.state.activeDegreeArea][i].taken;
+    for (var key in searchData) {
+      for (var i in searchData[key]) {
+        if (searchData[key][i].course_id === courseObject.course_id) {
+          searchData[key][i].taken = !searchData[key][i].taken;
+        }
       }
     }
 
     this.setState({
       courseData: searchData
     });
+    localStorage.setItem('courseData', JSON.stringify(searchData));
   }
 
 
   registerClicked() {
     var courseData = this.state.courseData;
-    localStorage.setItem('courseData', JSON.stringify(courseData));
-    //console.log(this);
     var suggestedClasses = getSuggestedClasses(courseData);
-    console.log(suggestedClasses);
-    console.log(courseData['Major']);
     var courses = {};
     for (var key in courseData) {
       courses[key] = [];
       for (var i in courseData[key]) {
         for (var j in suggestedClasses) {
-          //console.log(courseData[key][i].id.toString() + ' - ' + suggestedClasses[j].toString());
-          //console.log(suggestedClasses[j]);
           if (suggestedClasses[j] === courseData[key][i].id.toString()) {
             if(!courseData[key][i].taken){
               courses[key].push(courseData[key][i]);
