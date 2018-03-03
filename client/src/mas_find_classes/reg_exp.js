@@ -1,9 +1,6 @@
 
 // ********* PARSE REQUIREMENTS ***********
 
-const requirements = "Enrollment Requirements: Prerequisite: Students must completed EECS 172-0 or EECS 103-0 or EECS 123-2 to register for this course."
-
-
 function string_parser(course) {
   if (!course) {
     return [];
@@ -12,7 +9,7 @@ function string_parser(course) {
   const class_and_number = [];
 
   words_array.forEach((word, i) => {
-    if (word ==  `EECS`) {
+    if (word === `EECS`) {
       class_and_number.push(word);
       class_and_number.push(words_array[i+1]);
       class_and_number.push(words_array[i+2])
