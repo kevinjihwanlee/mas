@@ -1,4 +1,330 @@
 {
+	"Major": [
+		{
+			"attributes": "Social & Behavioral Sciences Distro Area\n\n",
+			"catalog_num": "101-0",
+			"class_num": 12785,
+			"component": "LEC",
+			"course_components": [
+				{
+					"component": "DIS",
+					"end_time": "15:50",
+					"meeting_days": "Fr",
+					"room": "Tech Institute Lecture Room 5",
+					"section": "60",
+					"start_time": "15:00"
+				},
+				{
+					"component": "DIS",
+					"end_time": "15:50",
+					"meeting_days": "Fr",
+					"room": "Technological Institute LG72",
+					"section": "61",
+					"start_time": "15:00"
+				},
+				{
+					"component": "DIS",
+					"end_time": "13:50",
+					"meeting_days": "Fr",
+					"room": "Technological Institute L168",
+					"section": "62",
+					"start_time": "13:00"
+				},
+				{
+					"component": "DIS",
+					"end_time": "14:50",
+					"meeting_days": "Fr",
+					"room": "Technological Institute LG72",
+					"section": "63",
+					"start_time": "14:00"
+				},
+				{
+					"component": "DIS",
+					"end_time": "14:50",
+					"meeting_days": "Fr",
+					"room": "Technological Institute L168",
+					"section": "64",
+					"start_time": "14:00"
+				},
+				{
+					"component": "DIS",
+					"end_time": "13:50",
+					"meeting_days": "Fr",
+					"room": "Tech Institute Lecture Room 4",
+					"section": "65",
+					"start_time": "13:00"
+				},
+				{
+					"component": "DIS",
+					"end_time": "11:50",
+					"meeting_days": "Fr",
+					"room": "Technological Institute F280",
+					"section": "66",
+					"start_time": "11:00"
+				},
+				{
+					"component": "DIS",
+					"end_time": "11:50",
+					"meeting_days": "Fr",
+					"room": "Technological Institute L170",
+					"section": "67",
+					"start_time": "11:00"
+				},
+				{
+					"component": "DIS",
+					"end_time": "11:50",
+					"meeting_days": "Fr",
+					"room": "Technological Institute MG28",
+					"section": "68",
+					"start_time": "11:00"
+				},
+				{
+					"component": "DIS",
+					"end_time": "12:50",
+					"meeting_days": "Fr",
+					"room": "Technological Institute M120",
+					"section": "69",
+					"start_time": "12:00"
+				},
+				{
+					"component": "DIS",
+					"end_time": "13:50",
+					"meeting_days": "Fr",
+					"room": "No Room Needed",
+					"section": "70",
+					"start_time": "13:00"
+				},
+				{
+					"component": "DIS",
+					"end_time": "12:50",
+					"meeting_days": "Fr",
+					"room": "No Room Needed",
+					"section": "71",
+					"start_time": "12:00"
+				},
+				{
+					"component": "DIS",
+					"end_time": "10:50",
+					"meeting_days": "Fr",
+					"room": "Technological Institute M166",
+					"section": "72",
+					"start_time": "10:00"
+				},
+				{
+					"component": "DIS",
+					"end_time": "10:50",
+					"meeting_days": "Fr",
+					"room": "No Room Needed",
+					"section": "73",
+					"start_time": "10:00"
+				},
+				{
+					"component": "DIS",
+					"end_time": "15:50",
+					"meeting_days": "Fr",
+					"room": "Technological Institute LG62",
+					"section": "74",
+					"start_time": "15:00"
+				},
+				{
+					"component": "DIS",
+					"end_time": null,
+					"meeting_days": null,
+					"room": "TBA",
+					"section": "X60",
+					"start_time": null
+				}
+			],
+			"course_descriptions": [],
+			"course_id": 8093,
+			"end_date": "2017-12-02",
+			"end_time": "11:50",
+			"id": 158910,
+			"instructor": {
+				"address": null,
+				"bio": null,
+				"name": "Christopher K Riesbeck",
+				"office_hours": null,
+				"phone": null
+			},
+			"meeting_days": "MoWe",
+			"overview": null,
+			"requirements": null,
+			"room": {
+				"building_id": 119,
+				"building_name": "Technological Institute",
+				"id": 557,
+				"name": "AUD"
+			},
+			"school": "MEAS",
+			"search_name": "EECS 101-0",
+			"seats": 350,
+			"section": "20",
+			"start_date": "2017-09-19",
+			"start_time": "11:00",
+			"subject": "EECS",
+			"taken": false,
+			"term": "2017 Fall",
+			"title": "An Introduction to Computer Science for Everyone",
+			"topic": null
+		},
+		{
+			"attributes": "Formal Studies Distro Area\n\n",
+			"catalog_num": "111-0",
+			"class_num": 12782,
+			"component": "LEC",
+			"course_components": [],
+			"course_descriptions": [],
+			"course_id": 4964,
+			"end_date": "2017-12-02",
+			"end_time": "12:50",
+			"id": 158912,
+			"instructor": {
+				"address": null,
+				"bio": null,
+				"name": "Ian D Horswill",
+				"office_hours": null,
+				"phone": null
+			},
+			"meeting_days": "MoWeFr",
+			"overview": null,
+			"requirements": null,
+			"room": {
+				"building_id": 119,
+				"building_name": "Technological Institute",
+				"id": 557,
+				"name": "AUD"
+			},
+			"school": "MEAS",
+			"search_name": "EECS 111-0",
+			"seats": 350,
+			"section": "20",
+			"start_date": "2017-09-19",
+			"start_time": "12:00",
+			"subject": "EECS",
+			"taken": false,
+			"term": "2017 Fall",
+			"title": "Fundamentals of Computer Programming",
+			"topic": null
+		},
+		{
+			"attributes": null,
+			"catalog_num": "211-0",
+			"class_num": 12783,
+			"component": "LEC",
+			"course_components": [],
+			"course_descriptions": [],
+			"course_id": 4967,
+			"end_date": "2017-12-02",
+			"end_time": "13:50",
+			"id": 158915,
+			"instructor": {
+				"address": null,
+				"bio": null,
+				"name": "Sara Hodges Owsley",
+				"office_hours": null,
+				"phone": null
+			},
+			"meeting_days": "TuTh",
+			"overview": null,
+			"requirements": "Enrollment Requirements: Students must have taken EECS 111-0 \"Fundamentals of Computer Programming\" to register for this course.",
+			"room": {
+				"building_id": 119,
+				"building_name": "Technological Institute",
+				"id": 612,
+				"name": "M345"
+			},
+			"school": "MEAS",
+			"search_name": "EECS 211-0",
+			"seats": 100,
+			"section": "1",
+			"start_date": "2017-09-19",
+			"start_time": "12:30",
+			"subject": "EECS",
+			"taken": false,
+			"term": "2017 Fall",
+			"title": "Fundamentals of Computer Programming II",
+			"topic": null
+		},
+		{
+			"attributes": null,
+			"catalog_num": "212-0",
+			"class_num": 12784,
+			"component": "LEC",
+			"course_components": [],
+			"course_descriptions": [],
+			"course_id": 4968,
+			"end_date": "2017-12-02",
+			"end_time": "15:50",
+			"id": 158916,
+			"instructor": {
+				"address": null,
+				"bio": null,
+				"name": "Aravindan Vijayaraghavan",
+				"office_hours": null,
+				"phone": null
+			},
+			"meeting_days": "MoWeFr",
+			"overview": null,
+			"requirements": "Enrollment Requirements: Pre-requisites: (EECS 110 or EECS 111) and Math 230",
+			"room": {
+				"building_id": 119,
+				"building_name": "Technological Institute",
+				"id": 595,
+				"name": "L361"
+			},
+			"school": "MEAS",
+			"search_name": "EECS 212-0",
+			"seats": 60,
+			"section": "20",
+			"start_date": "2017-09-19",
+			"start_time": "15:00",
+			"subject": "EECS",
+			"taken": false,
+			"term": "2017 Fall",
+			"title": "Mathematical Foundations of Comp Science",
+			"topic": null
+		},
+		{
+			"attributes": null,
+			"catalog_num": "213-0",
+			"class_num": 12808,
+			"component": "LEC",
+			"course_components": [],
+			"course_descriptions": [],
+			"course_id": 15611,
+			"end_date": "2017-12-02",
+			"end_time": "15:20",
+			"id": 158917,
+			"instructor": {
+				"address": null,
+				"bio": null,
+				"name": "Nikolaos Hardavellas",
+				"office_hours": null,
+				"phone": null
+			},
+			"meeting_days": "TuTh",
+			"overview": null,
+			"requirements": "Enrollment Requirements: Pre-requisite: Students must have completed EECS 211 to enroll in this course.",
+			"room": {
+				"building_id": 119,
+				"building_name": "Technological Institute",
+				"id": 612,
+				"name": "M345"
+			},
+			"school": "MEAS",
+			"search_name": "EECS 213-0",
+			"seats": 102,
+			"section": "20",
+			"start_date": "2017-09-19",
+			"start_time": "14:00",
+			"subject": "EECS",
+			"taken": false,
+			"term": "2017 Fall",
+			"title": "Introduction to Computer Systems",
+			"topic": null
+		}
+	],
 	"Breadth": [
 		{
 			"attributes": null,
@@ -1167,332 +1493,6 @@
 			"taken": false,
 			"term": "2017 Fall",
 			"title": "Probabilistic Graphical Models",
-			"topic": null
-		}
-	],
-	"Major": [
-		{
-			"attributes": "Social & Behavioral Sciences Distro Area\n\n",
-			"catalog_num": "101-0",
-			"class_num": 12785,
-			"component": "LEC",
-			"course_components": [
-				{
-					"component": "DIS",
-					"end_time": "15:50",
-					"meeting_days": "Fr",
-					"room": "Tech Institute Lecture Room 5",
-					"section": "60",
-					"start_time": "15:00"
-				},
-				{
-					"component": "DIS",
-					"end_time": "15:50",
-					"meeting_days": "Fr",
-					"room": "Technological Institute LG72",
-					"section": "61",
-					"start_time": "15:00"
-				},
-				{
-					"component": "DIS",
-					"end_time": "13:50",
-					"meeting_days": "Fr",
-					"room": "Technological Institute L168",
-					"section": "62",
-					"start_time": "13:00"
-				},
-				{
-					"component": "DIS",
-					"end_time": "14:50",
-					"meeting_days": "Fr",
-					"room": "Technological Institute LG72",
-					"section": "63",
-					"start_time": "14:00"
-				},
-				{
-					"component": "DIS",
-					"end_time": "14:50",
-					"meeting_days": "Fr",
-					"room": "Technological Institute L168",
-					"section": "64",
-					"start_time": "14:00"
-				},
-				{
-					"component": "DIS",
-					"end_time": "13:50",
-					"meeting_days": "Fr",
-					"room": "Tech Institute Lecture Room 4",
-					"section": "65",
-					"start_time": "13:00"
-				},
-				{
-					"component": "DIS",
-					"end_time": "11:50",
-					"meeting_days": "Fr",
-					"room": "Technological Institute F280",
-					"section": "66",
-					"start_time": "11:00"
-				},
-				{
-					"component": "DIS",
-					"end_time": "11:50",
-					"meeting_days": "Fr",
-					"room": "Technological Institute L170",
-					"section": "67",
-					"start_time": "11:00"
-				},
-				{
-					"component": "DIS",
-					"end_time": "11:50",
-					"meeting_days": "Fr",
-					"room": "Technological Institute MG28",
-					"section": "68",
-					"start_time": "11:00"
-				},
-				{
-					"component": "DIS",
-					"end_time": "12:50",
-					"meeting_days": "Fr",
-					"room": "Technological Institute M120",
-					"section": "69",
-					"start_time": "12:00"
-				},
-				{
-					"component": "DIS",
-					"end_time": "13:50",
-					"meeting_days": "Fr",
-					"room": "No Room Needed",
-					"section": "70",
-					"start_time": "13:00"
-				},
-				{
-					"component": "DIS",
-					"end_time": "12:50",
-					"meeting_days": "Fr",
-					"room": "No Room Needed",
-					"section": "71",
-					"start_time": "12:00"
-				},
-				{
-					"component": "DIS",
-					"end_time": "10:50",
-					"meeting_days": "Fr",
-					"room": "Technological Institute M166",
-					"section": "72",
-					"start_time": "10:00"
-				},
-				{
-					"component": "DIS",
-					"end_time": "10:50",
-					"meeting_days": "Fr",
-					"room": "No Room Needed",
-					"section": "73",
-					"start_time": "10:00"
-				},
-				{
-					"component": "DIS",
-					"end_time": "15:50",
-					"meeting_days": "Fr",
-					"room": "Technological Institute LG62",
-					"section": "74",
-					"start_time": "15:00"
-				},
-				{
-					"component": "DIS",
-					"end_time": null,
-					"meeting_days": null,
-					"room": "TBA",
-					"section": "X60",
-					"start_time": null
-				}
-			],
-			"course_descriptions": [],
-			"course_id": 8093,
-			"end_date": "2017-12-02",
-			"end_time": "11:50",
-			"id": 158910,
-			"instructor": {
-				"address": null,
-				"bio": null,
-				"name": "Christopher K Riesbeck",
-				"office_hours": null,
-				"phone": null
-			},
-			"meeting_days": "MoWe",
-			"overview": null,
-			"requirements": null,
-			"room": {
-				"building_id": 119,
-				"building_name": "Technological Institute",
-				"id": 557,
-				"name": "AUD"
-			},
-			"school": "MEAS",
-			"search_name": "EECS 101-0",
-			"seats": 350,
-			"section": "20",
-			"start_date": "2017-09-19",
-			"start_time": "11:00",
-			"subject": "EECS",
-			"taken": false,
-			"term": "2017 Fall",
-			"title": "An Introduction to Computer Science for Everyone",
-			"topic": null
-		},
-		{
-			"attributes": "Formal Studies Distro Area\n\n",
-			"catalog_num": "111-0",
-			"class_num": 12782,
-			"component": "LEC",
-			"course_components": [],
-			"course_descriptions": [],
-			"course_id": 4964,
-			"end_date": "2017-12-02",
-			"end_time": "12:50",
-			"id": 158912,
-			"instructor": {
-				"address": null,
-				"bio": null,
-				"name": "Ian D Horswill",
-				"office_hours": null,
-				"phone": null
-			},
-			"meeting_days": "MoWeFr",
-			"overview": null,
-			"requirements": null,
-			"room": {
-				"building_id": 119,
-				"building_name": "Technological Institute",
-				"id": 557,
-				"name": "AUD"
-			},
-			"school": "MEAS",
-			"search_name": "EECS 111-0",
-			"seats": 350,
-			"section": "20",
-			"start_date": "2017-09-19",
-			"start_time": "12:00",
-			"subject": "EECS",
-			"taken": false,
-			"term": "2017 Fall",
-			"title": "Fundamentals of Computer Programming",
-			"topic": null
-		},
-		{
-			"attributes": null,
-			"catalog_num": "211-0",
-			"class_num": 12783,
-			"component": "LEC",
-			"course_components": [],
-			"course_descriptions": [],
-			"course_id": 4967,
-			"end_date": "2017-12-02",
-			"end_time": "13:50",
-			"id": 158915,
-			"instructor": {
-				"address": null,
-				"bio": null,
-				"name": "Sara Hodges Owsley",
-				"office_hours": null,
-				"phone": null
-			},
-			"meeting_days": "TuTh",
-			"overview": null,
-			"requirements": "Enrollment Requirements: Students must have taken EECS 111-0 \"Fundamentals of Computer Programming\" to register for this course.",
-			"room": {
-				"building_id": 119,
-				"building_name": "Technological Institute",
-				"id": 612,
-				"name": "M345"
-			},
-			"school": "MEAS",
-			"search_name": "EECS 211-0",
-			"seats": 100,
-			"section": "1",
-			"start_date": "2017-09-19",
-			"start_time": "12:30",
-			"subject": "EECS",
-			"taken": false,
-			"term": "2017 Fall",
-			"title": "Fundamentals of Computer Programming II",
-			"topic": null
-		},
-		{
-			"attributes": null,
-			"catalog_num": "212-0",
-			"class_num": 12784,
-			"component": "LEC",
-			"course_components": [],
-			"course_descriptions": [],
-			"course_id": 4968,
-			"end_date": "2017-12-02",
-			"end_time": "15:50",
-			"id": 158916,
-			"instructor": {
-				"address": null,
-				"bio": null,
-				"name": "Aravindan Vijayaraghavan",
-				"office_hours": null,
-				"phone": null
-			},
-			"meeting_days": "MoWeFr",
-			"overview": null,
-			"requirements": "Enrollment Requirements: Pre-requisites: (EECS 110 or EECS 111) and Math 230",
-			"room": {
-				"building_id": 119,
-				"building_name": "Technological Institute",
-				"id": 595,
-				"name": "L361"
-			},
-			"school": "MEAS",
-			"search_name": "EECS 212-0",
-			"seats": 60,
-			"section": "20",
-			"start_date": "2017-09-19",
-			"start_time": "15:00",
-			"subject": "EECS",
-			"taken": false,
-			"term": "2017 Fall",
-			"title": "Mathematical Foundations of Comp Science",
-			"topic": null
-		},
-		{
-			"attributes": null,
-			"catalog_num": "213-0",
-			"class_num": 12808,
-			"component": "LEC",
-			"course_components": [],
-			"course_descriptions": [],
-			"course_id": 15611,
-			"end_date": "2017-12-02",
-			"end_time": "15:20",
-			"id": 158917,
-			"instructor": {
-				"address": null,
-				"bio": null,
-				"name": "Nikolaos Hardavellas",
-				"office_hours": null,
-				"phone": null
-			},
-			"meeting_days": "TuTh",
-			"overview": null,
-			"requirements": "Enrollment Requirements: Pre-requisite: Students must have completed EECS 211 to enroll in this course.",
-			"room": {
-				"building_id": 119,
-				"building_name": "Technological Institute",
-				"id": 612,
-				"name": "M345"
-			},
-			"school": "MEAS",
-			"search_name": "EECS 213-0",
-			"seats": 102,
-			"section": "20",
-			"start_date": "2017-09-19",
-			"start_time": "14:00",
-			"subject": "EECS",
-			"taken": false,
-			"term": "2017 Fall",
-			"title": "Introduction to Computer Systems",
 			"topic": null
 		}
 	],

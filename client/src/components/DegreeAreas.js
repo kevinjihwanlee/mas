@@ -5,7 +5,7 @@ const DegreeAreas = (props) => {
 
   return (
     <div className="search_degree">
-      <DropdownButton title="Degree Areas" bsSize="small">
+      <DropdownButton title={props.activeDegreeArea} bsSize="small">
         {props.degreeAreas.map(degreeArea => {
           return (<MenuItem href="#" onClick={(e) => {props.changeDegreeArea(degreeArea);}}>{degreeArea}</MenuItem>)
         })}
