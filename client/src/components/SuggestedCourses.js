@@ -1,10 +1,23 @@
 import React, { Component } from 'react';
 import {ListGroupItem, NavDropdown, ListGroup} from 'react-bootstrap';
 
-const SuggestedCourses = (props) => {
+export default class SuggestedCourses extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      suggestedCourses: []
+    }
+  }
+
+  componentDidMount() {
+
+  }
+
+  render() {
+    console.log(this.props.suggestedCourses);
   return (
     <div>
-
             <div class="panel panel-default">
               <div class="panel-heading">
                 <h4>
@@ -14,7 +27,7 @@ const SuggestedCourses = (props) => {
 
               <table class="table table-fixed">
                 <tbody>
-                    {props.suggestedCourses.map(course => (
+                    {this.props.suggestedCourses.map(course => (
                     <tr>
                     <td class="col-xs-12">
                       <h4>{course.search_name}</h4>
@@ -27,5 +40,4 @@ const SuggestedCourses = (props) => {
     </div>
   );
 }
-
-export default SuggestedCourses;
+}
