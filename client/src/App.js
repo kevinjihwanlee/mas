@@ -20,10 +20,10 @@ class App extends Component {
 
     this.state = {
        currentCourses: [],
-       suggestedCourses: [],
+       suggestedCourses: {},
        degreeAreas: [],
-       activeDegreeArea: null,
-       suggestedDegreeArea: null,
+       activeDegreeArea: "Major",
+       suggestedDegreeArea: "Major",
        courseData: {},
        itemsCount : 40
     }
@@ -96,16 +96,16 @@ class App extends Component {
     var suggestedClasses = getSuggestedClasses(courseData);
     console.log(suggestedClasses);
     console.log(courseData['Major']);
-    var courses = [];
+    var courses = {};
     for (var key in courseData) {
-      //console.log(key);
+      courses[key] = [];
       for (var i in courseData[key]) {
         for (var j in suggestedClasses) {
           //console.log(courseData[key][i].id.toString() + ' - ' + suggestedClasses[j].toString());
           //console.log(suggestedClasses[j]);
           if (suggestedClasses[j] === courseData[key][i].id.toString()) {
             if(!courseData[key][i].taken){
-              courses.push(courseData[key][i]);
+              courses[key].push(courseData[key][i]);
             }
           }
         }

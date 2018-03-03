@@ -14,6 +14,7 @@ const Courses = (props) => {
             <DegreeAreas
               degreeAreas={props.degreeAreas}
               changeDegreeArea={props.changeDegreeArea}
+              activeDegreeArea={props.activeDegreeArea}
             />
           </Col>
         </div>
