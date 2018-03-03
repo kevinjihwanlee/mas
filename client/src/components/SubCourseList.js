@@ -3,11 +3,23 @@ import React from 'react';
 const SubCourseList = (props) => {
   return (
     <div className="subcourselist">
-      <h4 className="sectionHeader underlinedText">{props.degreeArea}</h4>
+      <thead>
+        <tr>
+          <b>{props.degreeArea}</b>
+        </tr>
+      </thead>
       {props.courses.map(courseObject => (
         courseObject.taken &&
-        <p>{courseObject.search_name}<a onClick={(e) => {props.changeClass(courseObject);}} className="changeButton" bsStyle="primary"> X</a></p>
-
+        <tbody>
+        <tr>
+          <td class="col-xs-10">
+            <h4>{courseObject.search_name}</h4>
+          </td>
+          <td class="col-xs-2">
+            <h4><a onClick={(e) => {props.changeClass(courseObject);}} className="changeButton" bsStyle="primary"> X</a></h4>
+          </td>
+        </tr>
+        </tbody>
       ))}
     </div>
   )

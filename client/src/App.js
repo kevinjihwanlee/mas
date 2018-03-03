@@ -2,9 +2,11 @@ import React, { Component} from 'react';
 import ReactDOM from 'react-dom'
 
 import HeaderBar from './components/HeaderBar';
-import Search from './components/Search';
 import CourseList from './components/CourseList';
 import SuggestedCourses from './components/SuggestedCourses';
+import Courses from './components/Courses';
+import DegreeAreas from './components/DegreeAreas';
+
 import data from './data/data';
 import test_data from './data/test_data';
 import api_data from './data/api_data.json';
@@ -23,6 +25,7 @@ class App extends Component {
        suggestedCourses: [],
        degreeAreas: [],
        activeDegreeArea: null,
+       suggestedDegreeArea: null,
        courseData: {},
        suggestedData: {},
        itemsCount : 40
@@ -42,6 +45,7 @@ class App extends Component {
         courseData: cachedJSON,
         degreeAreas: degreeAreas,
         activeDegreeArea: degreeAreas[0],
+        suggestedDegreeArea: degreeAreas[0],
         currentCourses: cachedJSON[degreeAreas[0]]
       });
       return;
@@ -57,6 +61,7 @@ class App extends Component {
       suggestedData: test_data,
       degreeAreas: degreeAreas,
       activeDegreeArea: degreeAreas[0],
+      suggestedDegreeArea: degreeAreas[0],
       currentCourses: data[degreeAreas[0]],
     });
   }
@@ -64,7 +69,13 @@ class App extends Component {
   changeDegreeArea(degreeArea) {
     this.setState({
       activeDegreeArea: degreeArea,
-      currentCourses: this.state.courseData[degreeArea]
+      currentCourses: data[degreeArea]
+    });
+  }
+
+  changeSuggestedDegreeArea(degreeArea) {
+    this.setState({
+      suggestedDegreeArea: degreeArea
     });
   }
 
@@ -82,7 +93,7 @@ class App extends Component {
   }
 
   getSuggested() {
-    var suggestData = this.state.suggestedData[this.state.activeDegreeArea];
+    var suggestData = this.state.suggestedData[this.state.suggestedDegreeArea];
     var courses = [];
 
     for (var i in suggestData) {
@@ -121,31 +132,35 @@ class App extends Component {
 
   render() {
 
-    var itemElements = [];
-
-        for( var i = 0; i< this.state.itemsCount; i++){
-            itemElements.push(<div className="item" key={i}>item {i}</div>);
-        }
-
-        let scrollbarStyles = {borderRadius: 5};
-
     return (
       <div className="App">
         <HeaderBar />
         <div className="main-content">
           <Row>
-            <Col md={7}>
-              <Search
-                changeDegreeArea={this.changeDegreeArea.bind(this)}
+
+            <Col md={4}>
+              <Courses
                 changeClass={this.changeClass.bind(this)}
                 currentCourses={this.state.currentCourses}
                 degreeAreas={this.state.degreeAreas}
                 activeDegreeArea={this.state.activeDegreeArea}
-                />
+                changeDegreeArea={this.changeDegreeArea.bind(this)}
+              />
             </Col>
-            <Col md={5}>
+            <Col md={4}>
+              <CourseList
+                changeClass={this.changeClass.bind(this)}
+                registerClicked={this.registerClicked.bind(this)}
+                degreeAreas={this.state.degreeAreas}
+                courseData={this.state.courseData}
+              />
+            </Col>
+            <Col md={4}>
               <SuggestedCourses
                 suggestedCourses={this.getSuggested()}
+                degreeAreas={this.state.degreeAreas}
+                suggestedDegreeArea={this.state.suggestedDegreeArea}
+                changeSuggestedDegreeArea={this.changeSuggestedDegreeArea.bind(this)}
               />
             </Col>
           </Row>

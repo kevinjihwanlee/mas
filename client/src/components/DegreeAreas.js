@@ -1,16 +1,15 @@
 import React from 'react';
-import {ListGroupItem, ListGroup} from 'react-bootstrap';
+import {ListGroupItem, ListGroup, DropdownButton, MenuItem} from 'react-bootstrap';
 
 const DegreeAreas = (props) => {
 
   return (
     <div className="search_degree">
-    <h2 className="centeredText bold">Degree Areas</h2>
-      <ListGroup>
-          {props.degreeAreas.map(degreeArea => {
-            return (<ListGroupItem href="#" onClick={(e) => {props.changeDegreeArea(degreeArea);}}>{degreeArea}</ListGroupItem>)
-          })}
-      </ListGroup>
+      <DropdownButton title="Degree Areas" bsSize="small">
+        {props.degreeAreas.map(degreeArea => {
+          return (<MenuItem href="#" onClick={(e) => {props.changeDegreeArea(degreeArea);}}>{degreeArea}</MenuItem>)
+        })}
+      </DropdownButton>
     </div>
   )
 }

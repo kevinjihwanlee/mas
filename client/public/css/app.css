@@ -99,19 +99,16 @@ button.register-button:hover {
   justify-content: center;
 }
 
+.panel-heading {
+  height: 50px;
+  text-align: center;
+}
 .table-fixed thead {
   width: 97%;
 }
 .table-fixed tbody {
-  height: 400px;
   overflow-y: auto;
   width: 100%;
-}
-.tsearch {
-  height: 200px;
-}
-.tsuggested {
-  height: 400px;
 }
 .table-fixed thead, .table-fixed tbody, .table-fixed tr, .table-fixed td, .table-fixed th {
   display: block;

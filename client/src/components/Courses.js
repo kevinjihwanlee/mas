@@ -1,54 +1,38 @@
 import React from 'react';
-import {ListGroupItem, ListGroup} from 'react-bootstrap';
+import {ListGroupItem, ListGroup, Col} from 'react-bootstrap';
+import DegreeAreas from './DegreeAreas';
 
 const Courses = (props) => {
   return (
     <div>
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h4 className="centeredText bold">Search for Classes</h4>
+          <Col md={7}>
+            <h4 className="centeredText bold">Search for Classes</h4>
+          </Col>
+          <Col md={5}>
+            <DegreeAreas
+              degreeAreas={props.degreeAreas}
+              changeDegreeArea={props.changeDegreeArea}
+            />
+          </Col>
         </div>
         <table class="table table-fixed">
-          <thead>
-            <tr>
-              <th class="col-xs-12 centeredText">Classes Not Taken</th>
-            </tr>
-          </thead>
-          <tbody>
+          <tbody style={{height:415}}>
             {props.currentCourses.map(course => (
               !course.taken &&
               <tr>
-              <td class="col-xs-12">
-                <h4 className="bold">{course.search_name}</h4>
-                <p>{course.title}</p>
-                <p className="rightText"><a onClick={(e) => {props.changeClass(course);}} className="changeButton" bsStyle="primary">Add Class</a></p>
-              </td>
+                <td class="col-xs-10">
+                  <h4>{course.search_name}</h4>
+                </td>
+                <td class="col-xs-2">
+                  <h4><a onClick={(e) => {props.changeClass(course);}} className="changeButton" bsStyle="primary"> X</a></h4>
+                </td>
               </tr>
             ))}
           </tbody>
         </table>
-      </div>
-        <div class="panel panel-default">
-          <table class="table table-fixed">
-          <thead>
-            <tr>
-              <th class="col-xs-12 centeredText">Classes Taken</th>
-            </tr>
-          </thead>
-          <tbody>
-            {props.currentCourses.map(course => (
-              course.taken &&
-              <tr>
-              <td class="col-xs-12">
-                <h4 className="bold">{course.search_name}</h4>
-                <p>{course.title}</p>
-                <p className="rightText"><a onClick={(e) => {props.changeClass(course);}} className="changeButton" bsStyle="primary">Remove Class</a></p>
-              </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+        </div>
     </div>
   )
 }
